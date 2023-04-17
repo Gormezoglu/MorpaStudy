@@ -1,3 +1,29 @@
+ v4:
+ - Adding timestamp into the model
+ 
+ 
+ v3:
+
+- Removed hard plotted graphs and added xgboost codes.
+- Removed Clustering parts 
+ 
+ v2: 
+ comprehensive studies with slow processed plots.
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ------------------------------------------------------------
+
+ 
  - investigating the relationship between learning logs and procrastination (Yamada et al., 2017)
     Yamada, K., Nakamura, M., & Kato, K. (2017). Procrastination and Learning Logs: A Study of the Relationship between Procrastination and Learning Logs. In Proceedings of the 2017 ACM Conference on Learning @ Scale (pp. 1-8). ACM.
 
