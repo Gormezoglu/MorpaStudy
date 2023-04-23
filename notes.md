@@ -1,31 +1,19 @@
- v4:
- - Adding timestamp into the model
- 
- 
- v3:
+v4:
+
+- Adding timestamp into the model
+
+v3:
 
 - Removed hard plotted graphs and added xgboost codes.
-- Removed Clustering parts 
- 
- v2: 
- comprehensive studies with slow processed plots.
+- Removed Clustering parts
 
+v2:
+comprehensive studies with slow processed plots.
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- ------------------------------------------------------------
+---
 
- 
- - investigating the relationship between learning logs and procrastination (Yamada et al., 2017)
-    Yamada, K., Nakamura, M., & Kato, K. (2017). Procrastination and Learning Logs: A Study of the Relationship between Procrastination and Learning Logs. In Proceedings of the 2017 ACM Conference on Learning @ Scale (pp. 1-8). ACM.
+- investigating the relationship between learning logs and procrastination (Yamada et al., 2017)
+  Yamada, K., Nakamura, M., & Kato, K. (2017). Procrastination and Learning Logs: A Study of the Relationship between Procrastination and Learning Logs. In Proceedings of the 2017 ACM Conference on Learning @ Scale (pp. 1-8). ACM.
 
 - Romero and Ventura describe the educational data discovery process with 4 steps: educational environment, preprocessing, data mining and interpretation of results (2013)
 
@@ -33,43 +21,37 @@
 
 - general actions on LMS features including login, frequency numbers, spent time in the system (Akçapınar, 2016; Anozie & Junker, 2006; Choi et al., 2018; Feng et al., 2006; Hu et al., 2014; Huang et al., 2020; Hussain et al., 2018; Lonn et al., 2015; Minaei-Bidgoli et al., 2003; Saqr et al., 2017; Tempelaar, 2020; Tormey et al., 2020; Villagrá-Arnedo et al., 2016; Yamada et al., 2017; Yoo & Kim, 2014)
 
-
 - The aim of this study is to determine whether there is a relationship between middle school students' platform usage data which are the frequency of logging in, duration on the system, number of tests completed, number of questions completed, and number of contents completed and their achievement in the Science final exam. In addition, analyzing how the frequency of use of these variables in the system by students affect the exam performance.
 
 - In this study, some standard metrics, which are mobile/web login numbers and duration, tests completion-number, spent time for tests, completed homework number and rate of completion, content opened number and the exam success level is used.
 
 - Research Questions:
-    . How are the independent variables of login count, duration spent, login count with mobile devices, duration spent with mobile devices, answered questions, completed tests, completed homework and opened contents related to the LMS usage on the Science exam results?
-    . How are students classified in terms of the science exam performance according to the independent variables of login count, duration spent, login count with mobile devices, duration spent with mobile devices, answered questions, completed tests, completed homework and opened contents regarding LMS usage?
-    . What is the order of importance of independent variables in classifying students in terms of the Science exam performance?
+  . How are the independent variables of login count, duration spent, login count with mobile devices, duration spent with mobile devices, answered questions, completed tests, completed homework and opened contents related to the LMS usage on the Science exam results?
+  . How are students classified in terms of the science exam performance according to the independent variables of login count, duration spent, login count with mobile devices, duration spent with mobile devices, answered questions, completed tests, completed homework and opened contents regarding LMS usage?
+  . What is the order of importance of independent variables in classifying students in terms of the Science exam performance?
 
 - Limitations of the study
-    . It is assummed that the LMS system used in the study was used by students as desired.
-    . The students wre chosen by ... sampling
-    . 
+  . It is assummed that the LMS system used in the study was used by students as desired.
+  . The students wre chosen by ... sampling
+  .
 
 - One model of "Item Response Theory'' is used in the analysis of the exam results which is One-Parameter Logistic Model (OPLM).
 
 - CHAID algorithm uses chi-square test if dependent variable is categorical and F test if dependent variable is continuous in branching criterion
-    - When the target is missing, the value can be discarded. When the predictor is missed, most similar values can also be grouped and generates a new category on the tree
+  - When the target is missing, the value can be discarded. When the predictor is missed, most similar values can also be grouped and generates a new category on the tree
 
-
-
-----------------------------------------------------------------
+---
 
 To-Do for my study
+
 - Number of students by class level
 - konuya ilişkin study sırasında harcadığı zamanı bir feature olarak ekleyebiliriz.
 - konuya ilişkin kullandığı kaynak sayısının count ile hesaplayarak bir feature ekleyebiliriz.
 - datada verilen süre ile giriş çıkış saati arasındaki farklara göre procrastination v.s. yapıp yapmadığı incelenebilir.
 
-
-
-Fields -> member,	exam id,	subject,	exam type,	correct answer,	wrong answer, blank answer,	score,	start time,	end time,	duration
-
+Fields -> member, exam id, subject, exam type, correct answer, wrong answer, blank answer, score, start time, end time, duration
 
 Chat GPT advices
-
 
     Sounds like you have a good set of data to work with for your analysis! Before you start building machine learning models, it will be important to understand the characteristics of your data and any patterns that exist within it. This is known as exploratory data analysis (EDA).
 
@@ -85,7 +67,7 @@ Chat GPT advices
 
     By performing EDA, you can get a better understanding of your data and identify any potential issues or challenges that you'll need to address as you build your machine learning models.
 
-----
+---
 
 ? which algorithm should I use
 
@@ -100,7 +82,7 @@ Chat GPT advices
 
     Ultimately, the best way to determine which algorithm to use is to try a few different ones and see which one performs the best on your dataset. It is common to try several different algorithms and compare their performance using evaluation metrics such as accuracy, precision, and recall.
 
-----
+---
 
 ? I want to conduct clustering analysis for students. which method should I use
 
@@ -116,11 +98,7 @@ Chat GPT advices
 
     There are many other clustering algorithms that you could consider as well. Ultimately, the choice of method will depend on the characteristics of your data and the specific goals of your analysis. It is often helpful to try multiple methods and compare their performance to determine the best approach.
 
-
-
-
-
-----
+---
 
 ? the study is related the learning analytics and sample taken from a learning management system. which analysis method do you suggest in the light of these additional information
 
@@ -135,7 +113,8 @@ Chat GPT advices
     Text analysis: If you have data such as student forum posts or assignment submissions, you could use text analysis techniques to extract insights from the text. This could include techniques such as sentiment analysis, topic modeling, and keyword extraction.
 
     Ultimately, the choice of analysis method will depend on the specific goals of your study and the characteristics of your data. It may be helpful to use a combination of these methods to get a more complete understanding of your data.
-----
+
+---
 
 ? give me some examples for what kind of latent information can be extracted from this dataset
 
@@ -163,8 +142,7 @@ Chat GPT advices
 
     Exam performance by time of day: If you have data on the start and end times for each exam, you might be able to identify patterns in performance that are related to the time of day the exam was taken. For example, you might find that students who take exams in the morning tend to perform better than those who take exams in the afternoon.
 
-
-----
+---
 
 ? CHAID alternative algorithms
 
@@ -178,9 +156,9 @@ Chat GPT advices
 
     Random Forests: This is an ensemble learning method that combines multiple decision trees to make predictions. It works by training multiple decision trees on random subsets of the data, and then averaging their predictions to make the final prediction. Random forests can be used for both classification and regression problems, and they are less prone to overfitting than individual decision trees.
 
-----
+---
 
-? Can you outline how can I conduct random forest for this study 
+? Can you outline how can I conduct random forest for this study
 
     Sure! Here is an outline of how you can use random forests for your study:
 
@@ -196,9 +174,9 @@ Chat GPT advices
 
     Make predictions: Once you are satisfied with the performance of the model, you can use it to make predictions on new data.
 
-----
+---
 
-? which features should I use from my data for applying random forest 
+? which features should I use from my data for applying random forest
 
     The choice of features to use in a random forest model will depend on the specific characteristics of your data and the goals of your analysis. Here are a few factors to consider when selecting features:
 
@@ -210,7 +188,7 @@ Chat GPT advices
 
     Sparsity: If you have a large number of features, many of which have few or no values, it may be more efficient to use sparse matrix techniques to represent the data.
 
-----
+---
 
 ? what else can I extract from my data which given columns:
 
@@ -228,7 +206,7 @@ Chat GPT advices
 
     Time of day: If you have data on the start and end times for each exam, you might be able to identify
 
-----
+---
 
 ? how can I analyse Exam performance by subject
 
@@ -238,8 +216,7 @@ Chat GPT advices
 
     It may also be helpful to consider other factors that could impact exam performance, such as exam type or the duration of the exam. You could incorporate these variables into your analysis to get a more complete understanding of the relationships between them and exam performance.
 
-
-----
+---
 
 ? can you write me a literature review part for this study with references comply with master thesis?
 
@@ -264,7 +241,7 @@ Chat GPT advices
         Veletsianos, G. (2018). Ethical considerations for learning analytics research. Journal of Learning Analytics, 5(3), 365-380.
 
     ---
-    
+
     version 2
 
     In recent years, there has been growing interest in using data from learning management systems (LMS) to understand and improve student learning outcomes. LMS data can provide a rich source of information about student behavior, engagement, and performance, which can be used to identify patterns and trends that can inform the design and delivery of educational interventions (Joksimović et al., 2019).
