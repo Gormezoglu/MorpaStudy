@@ -46,15 +46,26 @@
 - Yukarıda AUC ile yapılan analizlerin hepsini AUCPR ile yap ve sonuçları karşılaştır.
 - Sonrasında bunları bir rapor haline getirerek Erkan hocaya ilet.
 - Gelecek Feedback'e göre ilerle.
------------------------
+
+---
 
 ## t5 is started
-- This resulted 1 False Positive. Not better than base model. 
+
+- This resulted 1 False Positive. Not better than base model.
   - (Puan eklendi - Tekrar Çalıştır.)
   - t6'nın altındaki GridSearch'ı buraya al
+  - max(AUCPR) = 0.26703 | 5 False Positive
 
 ## t6_v4_XGB_roc_aucpr_base - (modified t1)
-- This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric. 
 
+- This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric.
+  - max(AUCPR) = 0.20031 | 307 False Positive
 
+# RATIONALE
 
+- Our data is highly imbalanced. So we should use AUCPR (Area under Curve Precision Recall) as metric.
+- We should use SMOTE to balance the data.
+- We should use XGB as model.
+- We should use RF as alternative model.
+- We should use SVM as another alternative model.
+- We should use GridSearch to find best parameters.
