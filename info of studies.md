@@ -36,7 +36,7 @@
 - Erkan hocanın önerilerini dikkate alarak yeni bir versiyon çalıştır.
 
   - Soru üzerinde geçen süre ile bir bilgiye ulaşmak ( morpa datasında soru üzerinde geçen süre verisi yok.)
-  - Sınav tahmini için eski kaynaklar üzerinden çıkarımlarda bulun (Bunu tam anlamadım ancak ilgili sınav konularına ait kaynaklar verisi incelenerek bir yöntem oluşturulabilir.)
+  - Sınav tahmini için eski kaynaklar üzerinden çıkarımlarda bulun (Bunu tam anlamadım ancak ilgili sınav konularına ait kaynaklar verisi incelenerek bir yöntem oluşturulabilir. - Yapıldı)
   - XGBOOST yaparken: [gaming the system yapıldığını tahmin ettiğimiz parametreleri analizi yaparken çıkarmak gerekir.]
     - üye bilgisini çıkar.
     - Giriş timestamp'ini çıkar.
@@ -46,3 +46,15 @@
 - Yukarıda AUC ile yapılan analizlerin hepsini AUCPR ile yap ve sonuçları karşılaştır.
 - Sonrasında bunları bir rapor haline getirerek Erkan hocaya ilet.
 - Gelecek Feedback'e göre ilerle.
+-----------------------
+
+## t5 is started
+- This resulted 1 False Positive. Not better than base model. 
+  - (Puan eklendi - Tekrar Çalıştır.)
+  - t6'nın altındaki GridSearch'ı buraya al
+
+## t6_v4_XGB_roc_aucpr_base - (modified t1)
+- This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric. 
+
+
+
