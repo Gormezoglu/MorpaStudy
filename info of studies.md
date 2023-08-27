@@ -1,3 +1,17 @@
+# RATIONALE
+
+- Our data is highly imbalanced. So we should use AUCPR (Area under Curve Precision Recall) as metric.
+- We should use XGB as model.
+- We should use RF as alternative model.
+- We should use SVM as another alternative model (with SMOTE).
+- We should use GridSearch to find best parameters.
+
+# SHOULD WE USE SMOTE?
+
+- SMOTE is used to balance the data. But it is not necessary to use it. We can use it with XGB and RF. But we should not use it with SVM. Because SVM is not good with imbalanced data. So we should use SMOTE with XGB and RF. But we should not use it with SVM.
+
+---
+
 ## 0_table_population
 
 - this helps to populate the table. Don't need to run over and over.
@@ -9,15 +23,16 @@
 
 ## t0_v3
 
-- validation_0-aucpr:0.23937
+- validation_0-aucpr:0.28950 | 3 False Positive
 
-## t0_v4_XGB_roc_auc_base
+## t0_v4_XGB_roc_auc_base (t6 is used aucpr instead of auc)
 
 - AUC used for evaluation metric but since our data is imbalanced, we should use AUCPR instead. So this is not a good model.
 
 ## t1_v4_SMOTE&RF
 
 - This has different analysis appraoch. I used SMOTE to balance the data and then used RF to train the model. The outputs seem good visually. Can be used for UI
+- #LOOKING THE V's KISMINI BASE ÇALIŞMAYA EKLE. BURADAN DAĞILIMLARI FARKLI OLAN FEATURE'LARI ALMAMIZ GEREKTİĞİNİ İFADE ET. BENZER DAĞILIM GÖSTEREN FEATURELAR ANLAMLI BİR VERİ SAĞLAMAYACAĞINI BELİRT.
 
 ## t2_v4_SMOTE&XGB
 
@@ -59,13 +74,4 @@
 ## t6_v4_XGB_roc_aucpr_base - (modified t1)
 
 - This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric.
-  - max(AUCPR) = 0.20031 | 307 False Positive
-
-# RATIONALE
-
-- Our data is highly imbalanced. So we should use AUCPR (Area under Curve Precision Recall) as metric.
-- We should use SMOTE to balance the data.
-- We should use XGB as model.
-- We should use RF as alternative model.
-- We should use SVM as another alternative model.
-- We should use GridSearch to find best parameters.
+  - max(AUCPR) = 0.21395 | 3 False Positive | GridSearchCV doesn't work. It has GridSearchCV definitions under this version.
