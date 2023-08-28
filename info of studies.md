@@ -8,7 +8,7 @@
 
 # SHOULD WE USE SMOTE?
 
-- SMOTE is used to balance the data. But it is not necessary to use it. We can use it with XGB and RF. But we should not use it with SVM. Because SVM is not good with imbalanced data. So we should use SMOTE with XGB and RF. But we should not use it with SVM.
+- SMOTE is used to balance the data. But it is not necessary to use it. We can use it with XGB and RF. But we should not use it with SVM. Because SVM is a linear model and not good with imbalanced data.
 
 ---
 
@@ -71,8 +71,12 @@
   - t6'nın altındaki GridSearch'ı buraya al
   - max(AUCPR) = 0.26703 | 4 False Positive | 50% accuracy
 
-## t6_v4_XGB_roc_aucpr_base - (modified t1)
+## t6_v4_XGB_roc_aucpr_base - (modified t0_v4)
 
 - It has GridSearchCV definitions under this version. It can be used in Base Scenario for give more information
 - This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric.
   - max(AUCPR) = 0.21395 | 3 False Positive | 40% accuracy
+
+## t7_v4_SMOTE&RF - (modified t1)
+
+- Modified t1 with  - Needs to be studied . Not completed.
