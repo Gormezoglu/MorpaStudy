@@ -19,7 +19,7 @@
 ## 0_data_analysis
 
 - The most promising outcome of what I have so far. Could be used as base study for enhacement.
-  validation_0-aucpr:0.27762
+  validation_0-aucpr:0.27762 | 0 false positive | 2 true positive | 100% accuracy
 
 ## t0_v3
 
@@ -69,9 +69,10 @@
 - This resulted 1 False Positive. Not better than base model.
   - (Puan eklendi - Tekrar Çalıştır.)
   - t6'nın altındaki GridSearch'ı buraya al
-  - max(AUCPR) = 0.26703 | 5 False Positive
+  - max(AUCPR) = 0.26703 | 4 False Positive | 50% accuracy
 
 ## t6_v4_XGB_roc_aucpr_base - (modified t1)
 
+- It has GridSearchCV definitions under this version. It can be used in Base Scenario for give more information
 - This is modified version of t0_v4_XGB_roc_auc_base. AUCPR is used as metric.
-  - max(AUCPR) = 0.21395 | 3 False Positive | GridSearchCV doesn't work. It has GridSearchCV definitions under this version.
+  - max(AUCPR) = 0.21395 | 3 False Positive | 40% accuracy
