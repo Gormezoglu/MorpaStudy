@@ -1,6 +1,6 @@
 # RATIONALE
 
-- Our data is highly imbalanced. So we should use AUCPR (Area under Curve Precision Recall) as metric.
+- Our data is highly imbalanced. So we should use AUCPR (Area under Curve Precision Recall) as metric. (Precision-Recall is a useful measure of success of prediction when the classes are very imbalanced. source:scikit-learn.org)
 - We should use XGB as model.
 - We should use RF as alternative model.
 - We should use SVM as another alternative model (with SMOTE).
@@ -9,6 +9,16 @@
 # SHOULD WE USE SMOTE?
 
 - SMOTE is used to balance the data. But it is not necessary to use it. We can use it with XGB and RF. But we should not use it with SVM. Because SVM is a linear model and not good with imbalanced data.
+
+# REASONING
+
+- For the nature of the problem, our minority class is not meant to be incorrectly represented. Tis is the real-world distribution. GTS must be rare compared to Non-GTS
+- Our dataset also has data quality issues. Since we labeled GTS with our own assumptions, generating synthetic data will not help us to improve the model performance.
+
+# TAKEN FEATURES FOR ML MODELS
+
+  I will select the variables where fraud class have a interesting behavior and might can help us predict
+  df = df[['Sınav Türü',"Puan","S_süre","Sınıf","Ders","Aktif Materyal Sayısı","total_study_time","Label"]]
 
 ---
 
@@ -67,7 +77,7 @@
 ## t5 is started
 
 - This resulted 1 False Positive. Not better than base model.
-  - (Puan eklendi - Tekrar Çalıştır.)
+  - Taken the features suggested by Erkan hoca - (Sınav Türü, Puan, S_süre, Sınıf, Ders, Aktif Materyal Sayısı, total_study_time) Extracted Üye, Sınav, Konu and Giriş Log from the data. 
   - t6'nın altındaki GridSearch'ı buraya al
   - max(AUCPR) = 0.26703 | 4 False Positive | 50% accuracy
 
@@ -79,4 +89,6 @@
 
 ## t7_v4_SMOTE&RF - (modified t1)
 
-- Modified t1 with  - Needs to be studied . Not completed.
+- Modified t1 
+  - Extracted GridSearchCV
+-14 true positive | 55 false positive | 0% accuracy 
